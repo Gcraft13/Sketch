@@ -1,11 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: blue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .container {
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
+  height: 768px;
+  width: 768px;
+  box-sizing: content-box;
+  padding: 32px;
+  flex-direction: column;
+  background-color: white;
+}
+
+.row {
+  width: 100%;
+  display: flex;
 }
 
 .square {
-  background-color: red;
-  height: 100px;
-  width: 100px;
+  height: 100%;
+  border: 1px solid lightgray;
+}
+
+.colored {
+  background-color: black;
 }
