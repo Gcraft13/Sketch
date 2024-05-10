@@ -27,7 +27,7 @@ const newDiv = document.querySelectorAll(".box");
 const thirdDiv = document.querySelectorAll(".subDiv");
 
 newDiv.forEach((button) => {
-  button.addEventListener("click", () => {
+  button.addEventListener("mouseover", () => {
     button.classList.add("hover");
   });
 });
@@ -65,7 +65,7 @@ newGridBtn.addEventListener("click", function () {
   removeDiv();
   createDiv();
   newDiv.forEach((button) => {
-    button.addEventListener("click", () => {
+    button.addEventListener("mouseover", () => {
       button.classList.add("hover");
     });
   });
