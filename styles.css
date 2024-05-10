@@ -35,7 +35,9 @@ body {
 .box {
   flex: 1 1 auto;
   border-radius: 6px;
-  opacity: 0.1;
+
+  border: lightgrey solid 2px;
+  background-color: white;
 }
 
 .header {
@@ -43,4 +45,8 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.hover {
+  background-color: black;
 }

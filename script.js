@@ -1,6 +1,6 @@
 const grid = document.querySelector("#container");
 let blocks = 16;
-const newDiv = document.querySelectorAll(".box");
+const resetBtn = document.querySelector(".reset");
 
 function createDiv() {
   for (let i = 1; i <= blocks; i++) {
@@ -15,8 +15,18 @@ function createDiv() {
   }
 }
 
-newdiv.forEach((button) => {
-  button.addEventListener("mouseover", () => {});
+createDiv();
+
+const newDiv = document.querySelectorAll(".box");
+
+newDiv.forEach((button) => {
+  button.addEventListener("click", () => {
+    button.classList.add("hover");
+  });
 });
 
-createDiv();
+resetBtn.addEventListener("click", function () {
+  newDiv.forEach((button) => {
+    button.classList.remove("hover");
+  });
+});
