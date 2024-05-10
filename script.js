@@ -1,18 +1,18 @@
 const grid = document.querySelector("#container");
-let blocks = 16;
-let numberOfBlocks = parseInt(
-  prompt(
-    "Please insert the size of the grid you want as a number. Ex: 16 for 16x16"
-  )
-);
+
 const resetBtn = document.querySelector(".reset");
 const newGridBtn = document.querySelector(".newGrid");
 
 function createDiv() {
-  for (let i = 1; i <= blocks; i++) {
+  let numberOfBlocks = parseInt(
+    prompt(
+      "Please insert the size of the grid you want as a number. Ex: 16 for 16x16"
+    )
+  );
+  for (let i = 1; i <= numberOfBlocks; i++) {
     let subDiv = document.createElement("div");
     subDiv.classList.add("subDiv");
-    for (let j = 1; j < blocks; j++) {
+    for (let j = 1; j <= numberOfBlocks; j++) {
       let div = document.createElement("div");
       div.classList.add("box");
       subDiv.appendChild(div);
@@ -24,6 +24,7 @@ function createDiv() {
 createDiv();
 
 const newDiv = document.querySelectorAll(".box");
+const thirdDiv = document.querySelectorAll(".subDiv");
 
 newDiv.forEach((button) => {
   button.addEventListener("click", () => {
@@ -41,6 +42,9 @@ function removeDiv() {
   newDiv.forEach((button) => {
     button.remove();
   });
+  thirdDiv.forEach((button) => {
+    button.remove();
+  });
 }
 
 function newGrid(numberOfBlocks) {
@@ -48,7 +52,7 @@ function newGrid(numberOfBlocks) {
   for (i = 0; i <= numberOfBlocks; i++) {
     let subDiv = document.createElement("div");
     subDiv.classList.add("subDiv");
-    for (let j = 1; j < blocks; j++) {
+    for (let j = 1; j <= numberOfBlocks; j++) {
       let div = document.createElement("div");
       div.classList.add("box");
       subDiv.appendChild(div);
@@ -58,7 +62,8 @@ function newGrid(numberOfBlocks) {
 }
 
 newGridBtn.addEventListener("click", function () {
-  newGrid(numberOfBlocks);
+  removeDiv();
+  createDiv();
   newDiv.forEach((button) => {
     button.addEventListener("click", () => {
       button.classList.add("hover");

@@ -50,3 +50,10 @@ body {
 .hover {
   background-color: black;
 }
+
+button {
+  background-color: blue;
+  color: white;
+  margin: 10px;
+  padding: 10px;
+}
