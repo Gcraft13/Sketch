@@ -1,36 +1,46 @@
-* {
-  margin: 0;
-  padding: 0;
+html {
+  height: 100%;
 }
 
 body {
-  background-color: blue;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 8px;
+  background-color: #fde49e;
 }
 
-.container {
+#container {
+  padding: 10px;
   display: flex;
-  height: 768px;
-  width: 768px;
-  box-sizing: content-box;
-  padding: 32px;
-  flex-direction: column;
+  border: 12px solid brown;
+  flex-direction: row;
+  gap: 5px;
+  height: 960px;
+  width: 960px;
+  border-radius: 15px;
+  margin: 50px auto;
+  box-shadow: 15px 15px 5px black;
   background-color: white;
 }
 
-.row {
-  width: 100%;
+.subDiv {
   display: flex;
+  flex-direction: column;
+  flex: 1 1 0;
+  gap: 5px;
 }
 
-.square {
-  height: 100%;
-  border: 1px solid lightgray;
+.box {
+  flex: 1 1 auto;
+  border-radius: 6px;
+  opacity: 0.1;
 }
 
-.colored {
-  background-color: black;
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

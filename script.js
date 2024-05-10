@@ -1,22 +1,22 @@
-const container = document.querySelector(".container");
+const grid = document.querySelector("#container");
+let blocks = 16;
+const newDiv = document.querySelectorAll(".box");
 
-function fillRow() {
-  for (let i = 0; i < 16; i++) {
-    let square = document.createElement("div");
-    square.classList.add("square");
-    container.appendChild(square);
-    block.addEventListener("mouseenter", () => {
-      block.classList.add("colored");
-    });
+function createDiv() {
+  for (let i = 1; i <= blocks; i++) {
+    let subDiv = document.createElement("div");
+    subDiv.classList.add("subDiv");
+    for (let j = 1; j < blocks; j++) {
+      let div = document.createElement("div");
+      div.classList.add("box");
+      subDiv.appendChild(div);
+    }
+    grid.appendChild(subDiv);
   }
 }
 
-function createGrid() {
-  for (let i = 0; i < 16; i++) {
-    let row = document.createElement("div");
-    row.classList.add("row");
-    container.appendChild(row);
-  }
-}
+newdiv.forEach((button) => {
+  button.addEventListener("mouseover", () => {});
+});
 
-createGrid();
+createDiv();
